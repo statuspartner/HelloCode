@@ -7,13 +7,13 @@ int xa = 40, ya = 1,
     xc = 81, yc = 20;
 
 Console.SetCursorPosition(xa, ya);
-Console.WriteLine("+");
+Console.WriteLine("*");
 
 Console.SetCursorPosition(xb, yb);
-Console.WriteLine("+");
+Console.WriteLine("*");
 
 Console.SetCursorPosition(xc, yc);
-Console.WriteLine("+");
+Console.WriteLine("*");
 
 int x = xa, y = ya; // Для определенности добавляем некую точку с координатами.
 
@@ -41,7 +41,7 @@ while(count < 100000)
     }
 
     Console.SetCursorPosition(x, y);
-    Console.WriteLine("+");
+    Console.WriteLine("*");
     count++; // увеличение счетчика на 1
 
 }
