@@ -1,5 +1,5 @@
 ﻿Console.Clear();
-//Console.SetCursorPosition(10, 4);
+//Console.SetCursorPosition(10, 4); - Устанавливает положение курсора.
 //Console.WriteLine("*");
 
 int xa = 40, ya = 1,
