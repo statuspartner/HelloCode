@@ -1,21 +1,22 @@
 ﻿// Вид1 (ничего не принимают, ничего не возвращают)
-void Method1()
+
+/* void Method1()
 {
     Console.WriteLine("Автор ...");
 }
-// Method1(); // Вызов метода
+Method1(); // Вызов метода */
 
 
 
 // Вид2 (принимают какие-то аргументы, ничего не возвращают)
 
-/*void Method2(string msg)
+/* void Method2(string msg)
 {
     Console.WriteLine(msg);
 }
 Method2("Текст сообщения");
 Method2(msg: "Текст сообщения"); // Именованные аргументы - какому агрументу какое значение хотим указать (часто нужно, когда методы принимают какое-то количество агрументов)
-*/
+
 
 void Method21(string msg, int count)
 {
@@ -26,19 +27,21 @@ void Method21(string msg, int count)
         i++; // инкремент - увеличение счетчика на единицу. (уменьшение на 1 - декремент)
     }
 }
-// Method21(msg: "Текст", count: 3);
-// Method21(count: 3, msg: "новый текст");
+
+Method21(msg: "Текст", count: 3);
+Method21(count: 3, msg: "новый текст"); */
 
 
 
 // Вид3 (ничего не принимают, что-то возвращают)
 
-int Method3()
+/* int Method3()
 {
     return DateTime.Now.Year;
 }
 int year = Method3();
-// Console.WriteLine(year);
+
+Console.WriteLine(year); */
 
 
 // Вид4 (что-то принимают, что-то возвращают)
@@ -97,6 +100,7 @@ for (int i = 2; i <= 10; i++)
 //             012345
 // s[3] == r
 
+/*
 string text = "- Я думаю, Сказал князь, улыбаясь, - что "
             + "ежели бы вас послали вместо нашего Винценгероде,"
             + "вы бы взяли приступом согласие прусского короля. "
@@ -127,3 +131,38 @@ Console.WriteLine();
 newText = Replace(newText, 'С', 'с');
 Console.WriteLine(newText);
 Console.WriteLine();
+*/
+
+int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1}; // 1. Задаем массив
+
+void PrintArray(int[] array) // 2. Пишем метод вывода массива на экран
+{
+    int count = array.Length;
+
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
+
+void SelectionSort(int[] array) // 4. Пишем метод упорядочивания массива
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        int minPosition = i;
+        
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] < array[minPosition]) minPosition = j;
+        }
+        int temporarity = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temporarity;
+    }
+}
+
+PrintArray(arr); // 3. Выводим массив на экран
+
+SelectionSort(arr); // 5. Вызвать упорядочивание массива
+PrintArray(arr); // 6. Выводим результат на экран
